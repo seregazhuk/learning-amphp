@@ -4,16 +4,9 @@ require '../vendor/autoload.php';
 
 use Amp\Loop;
 
-$hello = function () {
-    echo 'Hello world' . PHP_EOL;
-};
-$greeting = function () {
-    echo 'Hi' . PHP_EOL;
-};
-
-Loop::run(
-    function () use ($hello, $greeting) {
-        Loop::delay(1, $hello);
-        $greeting();
-    }
-);
+Loop::run(function () {
+    Loop::delay(1, function() {
+        echo 'After timeout' . PHP_EOL;
+    });
+    echo 'Before timeout' . PHP_EOL;
+});

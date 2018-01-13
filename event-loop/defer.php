@@ -5,12 +5,12 @@ require '../vendor/autoload.php';
 use Amp\Loop;
 
 Loop::defer(function() {
-    echo 'defer before loop' . PHP_EOL;
+    echo 'first iteration' . PHP_EOL;
 });
 
 Loop::run(function ()  {
     Loop::defer(function() {
-        echo 'defer inside loop' . PHP_EOL;
+        echo 'third iteration' . PHP_EOL;
     });
-    echo 'inside loop' . PHP_EOL;
+    echo 'second iteration' . PHP_EOL;
 });
