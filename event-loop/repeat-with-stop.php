@@ -13,3 +13,5 @@ Loop::run(function () {
         }
     });
 });
+
+echo 'After the loop' . PHP_EOL;
