@@ -1,5 +1,6 @@
 <?php
 
+/** @var Generator $logger */
 $logger = call_user_func(function() {
     while(true) {
         echo 'Log: ' . yield . "\n";
