@@ -1,5 +1,6 @@
 {
     "require": {
-        "amphp/amp": "^2.0"
+        "amphp/amp": "^2.0",
+        "amphp/socket": "^0.10.5"
     }
 }
